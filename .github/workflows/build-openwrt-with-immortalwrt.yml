@@ -17,6 +17,7 @@ on:
         type: choice
         options:
           - all
+          - s905x-t95
           - s905x3_s905d_s912
           - a311d
           - s922x
