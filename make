@@ -83,6 +83,7 @@ auto_kernel="true"
 # Set the list of supported openwrt board
 build_openwrt=(
     "a311d"
+    "s905x-t95"
     "s922x" "s922x-n2" "s922x-reva"
     "s905x3" "s905x3-b"
     "s905x2" "s905x2-km3"
