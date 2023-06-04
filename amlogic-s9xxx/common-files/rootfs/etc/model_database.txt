@@ -6,7 +6,7 @@
 103:HG680P:s905x:meson-gxl-s905x-p212.dtb:u-boot-p212.bin:NA:NA:4C@1512Mhz,100Mb Nic:meson-gxl:s905x:yes
 104:TX3-Mini:s905w:meson-gxl-s905w-tx3-mini.dtb:u-boot-s905x-s912.bin:NA:NA:4C@1512Mhz,100Mb Nic:meson-gxl:s905w:yes
 105:MECOOL-KI-Pro:s905d:meson-gxl-s905d-mecool-ki-pro.dtb:u-boot-p201.bin:NA:NA:2G/16G,1Gb Nic:meson-gxl:s905d-ki:yes
-106:T95:s905x:meson-gxl-s905x-p212.dtb:u-boot-s905x-s912.bin:NA:NA:2G/16G,1Gb Nic:meson-gxl:s905x:no
+106:T95:s905x:meson-gxl-s905x-p212.dtb:u-boot-s905x-s912.bin:NA:NA:2G/16G,1Gb Nic:meson-gxl:s905x:yes
 107:B860H:s905x:meson-gxl-s905x-b860h.dtb:u-boot-p212.bin:NA:NA:4C@1512Mhz,100Mb Nic:meson-gxl:s905x:no
 108:TBee:s905x:meson-gxl-s905x-tbee.dtb:u-boot-p212.bin:NA:NA:4C@1512Mhz,100Mb Nic:meson-gxl:s905x:no
 109:W95:s905w:meson-gxl-s905w-p281.dtb:u-boot-s905x-s912.bin:NA:NA:4C@1512Mhz,2GB RAM,16GB ROM,100Mb Nic,USB2.0:meson-gxl:s905w:no
