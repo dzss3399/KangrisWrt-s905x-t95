@@ -65,7 +65,7 @@ svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-libernet-plus
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-libernet-bin package/luci-app-libernet-bin
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-mulimiter package/luci-app-mulimiter
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-myxllite package/luci-app-myxllite
-svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-netmon package/luci-app-netmon
+# svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-netmon package/luci-app-netmon
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/luci-app-openspeedtest package/luci-app-openspeedtest
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/badvpn package/badvpn
 svn co https://github.com/helmiau/helmiwrt-packages/trunk/corkscrew package/corkscrew
