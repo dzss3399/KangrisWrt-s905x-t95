@@ -143,10 +143,10 @@ sed -i 's/10.*/10.* 11.* 192.168.* 172.16.* 172.17.* 172.18.* 172.19.* 172.20.* 
 svn co https://github.com/karnadii/rooter/trunk/package/rooter-builds/0protocols/luci-proto-3x package/luci-proto-3x
 svn co https://github.com/karnadii/rooter/trunk/package/rooter-builds/0protocols/luci-proto-mbim package/luci-proto-mbim
 svn co https://github.com/karnadii/rooter/trunk/package/rooter/0drivers/rmbim package/rmbim
-#svn co https://github.com/Mas-Er/X-ROOterSource2102/trunk/package/rooter/0drivers/rqmi package/rqmi
+# svn co https://github.com/karnadii/rooter/trunk/package/rooter/0drivers/rqmi package/rqmi
 svn co https://github.com/karnadii/rooter/trunk/package/rooter/0basicsupport/ext-sms package/ext-sms
 svn co https://github.com/karnadii/rooter/trunk/package/rooter/0basicsupport/ext-buttons package/ext-buttons
-#svn co https://github.com/Mas-Er/X-ROOterSource2102/trunk/package/rooter/ext-rooter-basic package/ext-rooter-basic
+# svn co https://github.com/karnadii/rooter/trunk/package/rooter/ext-rooter-basic package/ext-rooter-basic
 # Rooter splash
 svn co https://github.com/karnadii/rooter/trunk/package/rooter/0splash/status package/status
 svn co https://github.com/karnadii/rooter/trunk/package/rooter/0splash/splash package/splash
@@ -214,5 +214,4 @@ EOF
 sed -i "s/yacd/Yet Another Clash Dashboard/g" package/luci-app-openclash/root/usr/share/openclash/ui/yacd/manifest.webmanifest
 sed -i '94s/80/90/g' package/luci-app-openclash/luasrc/controller/openclash.lua
 sed -i '94 i\	entry({"admin", "services", "openclash", "editor"}, template("openclash/editor"),_("Config Editor"), 80).leaf = true' package/luci-app-openclash/luasrc/controller/openclash.lua
-
 
