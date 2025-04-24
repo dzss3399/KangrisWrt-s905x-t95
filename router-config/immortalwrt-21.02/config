@@ -3,7 +3,6 @@
 # Function: Add or remove software packages, etc.
 # Source code repository: https://github.com/immortalwrt/immortalwrt.git / Branch: 21.02
 #========================================================================================================================
-ghgh
 # Build Firmware:
 CONFIG_TARGET_armvirt=y
 CONFIG_TARGET_armvirt_64=y
