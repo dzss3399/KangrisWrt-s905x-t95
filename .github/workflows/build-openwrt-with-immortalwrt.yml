@@ -78,7 +78,15 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:  
+      - name: Delete huge unnecessary tools folder
+        run: rm -rf /opt/hostedtoolcache
 
+      - uses: actions/checkout@v3
+
+      - name: Run foo
+        uses: docker://foo-image
+        with: 
+          args: /foo-script
                 
       - name: Checkout  
         uses: actions/checkout@v3
@@ -86,14 +94,10 @@ jobs:
       - name: free disk space
         run: |
               echo "Disk usage before cleanup:"
-              
-              df -h
-              sudo swapoff -a
-              sudo rm -f /swapfile
-              sudo apt clean
-              docker rmi $(docker image ls -aq)
-              df -h
-  
+              sudo rm -rf /usr/share/dotnet
+              sudo rm -rf /opt/ghc
+              sudo rm -rf "/usr/local/share/boost"
+              sudo rm -rf "$AGENT_TOOLSDIRECTORY"
               echo "Disk usage after cleanup:"
               df -h
 
