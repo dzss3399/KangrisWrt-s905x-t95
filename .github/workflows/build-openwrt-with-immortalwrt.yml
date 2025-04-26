@@ -78,7 +78,27 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:  
-
+      - name: free disk space
+        run: |
+              echo "Disk usage before cleanup:"
+              df -h
+    
+              sudo rm -rf ${GITHUB_WORKSPACE}/*
+              sudo rm -rf /home/runner/work/_temp/_github_workflow/create_releases
+              sudo rm -rf /home/runner/work/_temp/_github_home/create_releases
+    
+              sudo rm -rf /usr/share/dotnet
+              sudo rm -rf /usr/local/lib/android
+              sudo rm -rf /opt/ghc
+              sudo rm -rf "/usr/local/share/boost"
+              sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+              sudo swapoff -a
+              sudo rm -f /swapfile
+              sudo apt clean
+  
+              echo "Disk usage after cleanup:"
+              df -h
+                
       - name: Checkout  
         uses: actions/checkout@v3
         
