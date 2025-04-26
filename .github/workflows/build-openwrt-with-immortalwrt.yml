@@ -98,9 +98,8 @@ jobs:
 
             echo "Disk usage after cleanup:"
             df -h
-            
-    
-      - name: Checkout
+              
+      - name: Checkout  
         uses: actions/checkout@v3
         
       - name: Initialization environment
