@@ -80,17 +80,15 @@ jobs:
     steps:  
       - name: Delete huge unnecessary tools folder
         run: rm -rf /opt/hostedtoolcache
-
-      - uses: actions/checkout@v3
-
-      - name: Run foo
-        uses: docker://foo-image
-        with: 
-          args: /foo-script
-                
+               
       - name: Checkout  
         uses: actions/checkout@v3
         
+      - name: Run foo
+        uses: docker://foo-image
+        with: 
+          args: /foo-script      
+          
       - name: free disk space
         run: |
               echo "Disk usage before cleanup:"
