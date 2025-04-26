@@ -103,25 +103,25 @@ chmod +x files/bin/speedtest
 # popd
 
 # Set clash-core
-#mkdir -p files/etc/openclash/core
+# mkdir -p files/etc/openclash/core
 # VERNESONG_CORE=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/Clash | grep /clash-linux-armv8 | awk -F '"' '{print $4}')
 # VERNESONG_TUN=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/TUN-Premium | grep /clash-linux-armv8 | awk -F '"' '{print $4}')
 # VERNESONG_GAME=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/TUN | grep /clash-linux-armv8 | awk -F '"' '{print $4}')
-#DREAMACRO_CORE=$(curl -sL https://api.github.com/repos/Dreamacro/clash/releases | grep /clash-linux-armv8 | awk -F '"' '{print $4}' | sed -n '1p')
-#DREAMACRO_TUN=$(curl -sL https://api.github.com/repos/Dreamacro/clash/releases/tags/premium | grep /clash-linux-armv8 | awk -F '"' '{print $4}')
-#META_CORE=$(curl -sL https://api.github.com/repos/MetaCubeX/Clash.Meta/releases | grep /Clash.Meta-linux-arm64-v | awk -F '"' '{print $4}' | sed -n '1p')
+# DREAMACRO_CORE=$(curl -sL https://api.github.com/repos/Dreamacro/clash/releases | grep /clash-linux-armv8 | awk -F '"' '{print $4}' | sed -n '1p')
+# DREAMACRO_TUN=$(curl -sL https://api.github.com/repos/Dreamacro/clash/releases/tags/premium | grep /clash-linux-armv8 | awk -F '"' '{print $4}')
+# META_CORE=$(curl -sL https://api.github.com/repos/MetaCubeX/Clash.Meta/releases | grep /Clash.Meta-linux-arm64-v | awk -F '"' '{print $4}' | sed -n '1p')
 # wget -qO- $VERNESONG_CORE | tar xOvz > files/etc/openclash/core/clash_vernesong
 # wget -qO- $VERNESONG_TUN | gunzip -c > files/etc/openclash/core/clash_tun_vernesong
 # wget -qO- $VERNESONG_GAME | tar xOvz > files/etc/openclash/core/clash_game_vernesong
-#wget -qO- $DREAMACRO_CORE | gunzip -c > files/etc/openclash/core/clash
-#wget -qO- $DREAMACRO_TUN | gunzip -c > files/etc/openclash/core/clash_tun
-#wget -qO- $META_CORE | gunzip -c > files/etc/openclash/core/clash_meta
-#chmod +x files/etc/openclash/core/clash*
+# wget -qO- $DREAMACRO_CORE | gunzip -c > files/etc/openclash/core/clash
+# wget -qO- $DREAMACRO_TUN | gunzip -c > files/etc/openclash/core/clash_tun
+# wget -qO- $META_CORE | gunzip -c > files/etc/openclash/core/clash_meta
+# chmod +x files/etc/openclash/core/clash*
 
 # Set v2ray-rules-dat
-mkdir -p files/etc/openclash
-curl -sL https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -o files/etc/openclash/GeoSite.dat
-curl -sL https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat -o files/etc/openclash/GeoIP.dat
+# mkdir -p files/etc/openclash
+# curl -sL https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -o files/etc/openclash/GeoSite.dat
+# curl -sL https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat -o files/etc/openclash/GeoIP.dat
 
 #================================
 # Monitoring
@@ -200,19 +200,19 @@ EOF
 # Copyright 2022 by lynxnexy <https://github.com/lynxnexy/immortalwrt>
 # 
 
-#cat << EOF > package/luci-app-openclash/luasrc/view/openclash/editor.htm
-#<%+header%>
-#<div class="cbi-map">
-#<iframe id="editor" style="width: 100%; min-height: 100vh; border: none; border-radius: 2px;"></iframe>
-#</div>
-#<script type="text/javascript">
-#document.getElementById("editor").src = "http://" + window.location.hostname + "/tinyfm/tinyfm.php?p=etc/openclash";
-#</script>
-#<%+footer%>
-#EOF
+# cat << EOF > package/luci-app-openclash/luasrc/view/openclash/editor.htm
+# <%+header%>
+# <div class="cbi-map">
+# <iframe id="editor" style="width: 100%; min-height: 100vh; border: none; border-radius: 2px;"></iframe>
+# </div>
+# <script type="text/javascript">
+# document.getElementById("editor").src = "http://" + window.location.hostname + "/tinyfm/tinyfm.php?p=etc/openclash";
+# </script>
+# <%+footer%>
+# EOF
 
-#sed -i "s/yacd/Yet Another Clash Dashboard/g" package/luci-app-openclash/root/usr/share/openclash/ui/yacd/manifest.webmanifest
-#sed -i '94s/80/90/g' package/luci-app-openclash/luasrc/controller/openclash.lua
-#sed -i '94 i\	entry({"admin", "services", "openclash", "editor"}, template("openclash/editor"),_("Config Editor"), 80).leaf = true' package/luci-app-openclash/luasrc/controller/openclash.lua
+# sed -i "s/yacd/Yet Another Clash Dashboard/g" package/luci-app-openclash/root/usr/share/openclash/ui/yacd/manifest.webmanifest
+# sed -i '94s/80/90/g' package/luci-app-openclash/luasrc/controller/openclash.lua
+# sed -i '94 i\	entry({"admin", "services", "openclash", "editor"}, template("openclash/editor"),_("Config Editor"), 80).leaf = true' package/luci-app-openclash/luasrc/controller/openclash.lua
 
 
