@@ -92,7 +92,10 @@ jobs:
             sudo rm -rf /opt/ghc
             sudo rm -rf "/usr/local/share/boost"
             sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-  
+            sudo swapoff -a
+            sudo rm -f /swapfile
+            sudo apt clean
+
             echo "Disk usage after cleanup:"
             df -h
     
