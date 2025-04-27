@@ -206,7 +206,7 @@ jobs:
           body: |
             This is KarnadiWrt, custom openwrt firmware based on ImmortalWrt and ROOter for Amlogic s9xxx tv box
             * Firmware information
-            Default IP: 11.11.1.1 (esier to type IP)
+            Default IP: 192.168.13.1 (esier to type IP)
             Default username: root
             Default password: password
             Default WIFI name: KarnadiWrt
